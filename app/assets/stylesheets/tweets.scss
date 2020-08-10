@@ -1,0 +1,401 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.contents_row{
+  height: 100px;
+  background-color: black;
+  margin: auto;
+  overflow: hidden;
+  .upper__wrapper{
+    height: 40px;
+    padding-top: 10px;
+    display: flex;
+    .logo{
+      font-size: 40px;
+      color: white;
+    }
+    .left__contents {
+      list-style: none;
+      display: flex;
+      float: left;
+      &__link{
+        list-style: none;
+        padding-left: 10px;
+        padding-right: 10px;      
+        &__text{
+          font-size: 20px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+//投稿機能
+.back_contents{
+background : url( "/assets/images/1750869_l.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+height:1000px;
+}
+
+.back_contents::before{
+  background-color: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+.tweet_contents{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height:100%;
+}
+
+.tweet_main{
+  padding-top:40px;
+  width:800px;
+  box-sizing: border-box;
+  margin:0 auto;
+  width: 800px;
+  height:800px;
+}
+.toukou{
+  color:black;
+
+}
+.tweet_new{
+  background : no-repeat center/100% 100% url( "/assets/images/itiran2.jpg");
+  display: inline-block;
+  padding-top: 50px;
+  width: 700px;
+  height:800px;
+  text-align: center;
+  margin:0 auto;
+}
+
+.form_new{
+  border-radius:5px;
+  width: 500px;
+  height:35px;
+  margin-top: 35px;
+  text-align:left; 
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
+}
+
+.comment_new{
+  border-radius:5px;
+  width: 500px;
+  height:80px;
+  margin-top: 35px;
+  text-align:left; 
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
+
+}
+
+#toukou_btn{
+  margin-top: 25px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.6);
+}
+
+
+.what{
+  padding-top:100px;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  z-index: -1;
+  background : url( "/assets/images/about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.what::before{
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
+.btn{
+  width: 400px;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+.contents_area-index{
+background: rgb(238, 248, 224);
+    position: relative;
+    padding: 50px 0;
+    height: auto;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    font-family: serif;
+    font-weight: 300;
+}
+
+.area-name-wrap_area-name-index{
+
+max-width: 1080px;
+font-size: 20px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333;
+}
+
+.area-name{
+  position: relative;
+  font-size: 20px;
+  display: block;
+  width: auto;
+  padding: 30px 0 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//閲覧機能
+
+.pagenate{
+
+}
+.tweet_text_group_haiku{
+  height:100%;
+  width:100%;
+}
+
+.tweet_text_group_main{
+  margin-left: auto;
+  margin-right: auto;
+  height:600px;
+  width:410px;
+  background : no-repeat top/100% 100% url( "/assets/images/haiku_backgrounda.jpg");
+}
+.tweet_link{
+
+
+}
+
+.contributor{
+  position: relative;
+  height: 50px;
+  width: 200px;
+  border: 1px solid #111;
+  background: rgba(255,255,255,0.9);
+  margin: 30px auto 0;
+  border: double;
+  &_text{
+    height: auto;
+    width: auto;
+    font-family: serif;
+  
+    text-align:center;
+  color: black;
+  font-size: 30px;
+
+  }
+}
+
+
+.tweet_index_main{
+  height:100%;
+  width:100%;
+  background : no-repeat center/100% url( "/assets/images/japanese-style_00013.jpg");
+  background-color: #464646;
+}
+
+
+.tweets_group{
+  margin-top: 80px;
+  height:100%;
+  width:100%;
+}
+.tweet_image{
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+.tweet_image_group{
+
+}
+.tweet_brank{
+  height:35px;
+
+}
+.t_image{
+  height:220px;
+  width:300px;
+  border : solid 4px silver ; 
+}
+.tweet_image_text{
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+
+.tweet_text{
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom:30px;
+  text-align: center;
+  height:300px;
+  width:250px;
+  &_third{
+    margin-top: 60px;
+    float: left;
+    font-family: serif;
+    display: inline-block;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    width:60px;
+  }
+  &_second{
+    margin-top: 30px;
+    float: center;
+    vertical-align: top;
+    font-family: serif;
+    display: inline-block;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    width:60px;
+  }
+  &_first{
+    float: right;
+    vertical-align: top;
+    font-family: serif;
+    display: inline-block;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    width:60px;
+
+  }
+}
+
+//画像アップロード
+.custom-file {
+  display: inline-block;
+  overflow: hidden;
+  border-radius:5px;
+  width: 500px;
+  height:70px;
+  margin-top: 35px;
+  text-align:left; 
+  padding-left:40px;
+}
+.custom-file-label {
+  white-space: nowrap;
+  width: 600px;
+}
+.custom-file-input{
+  background-color: white;
+  width: 600px;
+}
+#upload_file{
+  display: inline-block;
+  width: 200px;
+}
+#preview{
+  display: inline-block;
+  width: 100px;
+}
+
+
+//閲覧詳細
+.tweet_index_main_show{
+  height:100%;
+  width:100%;
+  background : no-repeat top/100% url( "/assets/images/river_haikei.jpg");
+  background-color: #464646;
+}
+.tweets_comment {
+position: relative;
+    padding: 30px 80px 20px;
+    border-radius: 5px;
+    height: 100px;
+    max-width: 900px;
+    border: 1px solid #111;
+    background: rgba(255,255,255,0.9);
+    margin: auto 0;
+}
+
+.tweets_comment p {
+  margin: 0; 
+  padding: 0;
+  height:60px;
+  opacity:0,5;
+}
+
+.comment-box{
+position: relative;
+    padding: 30px 80px 20px;
+    border-radius: 5px;
+    height: 600px;
+    max-width: 800px;
+    border: 1px solid #111;
+    background: rgba(255,255,255,0.9);
+    margin: 50px auto 0;
+}
+
+
+
+
+
+
+//投稿完了
+.success{
+  font-family: serif;
+  display: inline-block;
+  padding: 150px 0px 0px 120px;
+  border-top: 1px solid #eee;
+  width: 700px;
+  height:800px;
+  margin: 100 auto;
+  text-align: center;
+  margin:0 auto;
+  h3{
+  font-family: serif;
+  color: white;
+  }
+}
+
+
+

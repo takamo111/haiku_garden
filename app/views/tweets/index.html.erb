@@ -1,0 +1,37 @@
+<div class="tweet_index_main">
+  <div class="tweets_group">
+    <div class= tweet_brank></div>
+    <div class="tweet_content">
+      <% @tweets.each do |tweet| %>
+        <%= render partial: "tweet" , locals: { tweet: tweet }%>
+      <% end %>
+      <div class= pagenate >
+        <%= paginate(@tweets) %>
+      </div>
+    </div>
+  </div> 
+</div>
+
+
+
+<div class="contents_area-index">
+  <div><i class="fas fa-history"></i>過去の投稿<span class="other-right"><span id="new">新着順</span> / <span id="like">いいね順</span></span></h2>
+    <% @tweets.each do |tweet| %>
+      <div class="area-name-wrap_area-name-index">
+        <div class="area-name">
+          <div>
+            <i class="far fa-clock fa-lg"></i>
+            0
+          </div>
+        <%= tweet.firstphrase %>&emsp;<%= tweet.secondphrase %>&emsp;<%= tweet.thirdphrase %><br>
+        </div> 
+          <span class=>投稿者:<%= current_user.name%></span>
+      </div>    
+    <% end %>
+  <%= paginate(@tweets) %>
+</div>    
+
+
+
+
+
