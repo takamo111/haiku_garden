@@ -3,19 +3,20 @@
     <div class= tweet_brank></div>
     <div class= tweet_brank></div>
     <div class="tweet_main">
-      <%= form_tag('/tweets', method: :post) do %>
+      <%= form_for @tweet do |f| %>
         <div class="tweet_new">
         <h3 class="toukou">新規投稿</h3>
-          <input class = form_new  placeholder="お題" type="text" name="name">
+          <div><%= f.text_field :name, class: "form_new",placeholder: "お題" %></div>
           <div class="custom-file">
-            <input type="file" name="upload_file" id="upload_file" class="data_file" />
+            <%= f.label :画像 %>
+            <%= f.file_field :image ,id: "upload_file",class: "data_file" %>
             <span id="preview_area"></span> 
           </div>
           <span id ="preview_areaas" ></span> 
-          <input class = form_new  placeholder="五" type="text" name="firstphrase">
-          <input class = form_new  placeholder="七" type="text" name="secondphrase">
-          <input class = form_new  placeholder="五" type="text" name="thirdphrase">
-          <textarea  class = comment_new cols="30" type="text" name="text" placeholder="コメント" rows="10"></textarea>
+          <div><%= f.text_field :firstphrase, class: "form_new",placeholder: "五" %></div>
+          <div><%= f.text_field :secondphrase, class: "form_new",placeholder: "七"  %></div>
+          <div><%= f.text_field :thirdphrase, class: "form_new",placeholder: "五"  %></div>
+          <div><%= f.text_field :text, class: "comment_new",placeholder: "コメント"  %></div>
           <input class =  "btn btn-primary" id="toukou_btn" type="submit" value="投稿する">
         </div>
       <% end %>
@@ -39,4 +40,6 @@
     }
   });
 </script>
+
+
 

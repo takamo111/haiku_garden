@@ -4,11 +4,16 @@ class TweetsController < ApplicationController
   end
 
   def new
-
+    @tweet = Tweet.new
   end
 
   def create
-    Tweet.create(name: tweet_params[:name], image: tweet_params[:image], text: tweet_params[:text],firstphrase: tweet_params[:firstphrase],secondphrase: tweet_params[:secondphrase],thirdphrase: tweet_params[:thirdphrase], user_id: current_user.id)
+    @tweet = Tweet.create(name: tweet_params[:name], image: tweet_params[:image], text: tweet_params[:text],firstphrase: tweet_params[:firstphrase],secondphrase: tweet_params[:secondphrase],thirdphrase: tweet_params[:thirdphrase], user_id: current_user.id)
+    if @tweet.save
+      redirect_to root_path, notice: '投稿を作成しました'
+    else
+      render :new
+    end
   end
 
   def edit
@@ -24,6 +29,6 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.permit(:name, :image, :text, :firstphrase, :secondphrase, :thirdphrase)
+    params.require(:tweet).permit(:name, :image, :text, :firstphrase, :secondphrase, :thirdphrase)
   end
 end
