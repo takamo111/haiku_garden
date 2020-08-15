@@ -14,18 +14,18 @@
 
 
 
-<div class="contents_area-index">
-  <div><i class="fas fa-history"></i>過去の投稿<span class="other-right"><span id="new">新着順</span> / <span id="like">いいね順</span></span></h2>
+<div class="contents_haiku_index">
+  <div><i class="haiku_history">過去の投稿<span class="other-right"><span id="new">新着順</span> / <span id="like">いいね順</span></span></i>
     <% @tweets.each do |tweet| %>
-      <div class="area-name-wrap_area-name-index">
-        <div class="area-name">
+      <div class="haiku_name_wrap">
+        <div class="haiku_main_wrap">
+        <%= tweet.firstphrase %>&emsp;<%= tweet.secondphrase %>&emsp;<%= tweet.thirdphrase %><br>
+        </div> 
+          <span class= haiku_contributor >投稿者:<%= tweet.user.name%></span>
           <div>
             <i class="far fa-clock fa-lg"></i>
             0
           </div>
-        <%= tweet.firstphrase %>&emsp;<%= tweet.secondphrase %>&emsp;<%= tweet.thirdphrase %><br>
-        </div> 
-          <span class=>投稿者:<%= current_user.name%></span>
       </div>    
     <% end %>
   <%= paginate(@tweets) %>
