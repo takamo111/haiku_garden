@@ -4,7 +4,7 @@
   <% if user_signed_in? %>
     <li class= title_btn><%= link_to 'ホーム', root_path %></li>
     <li class= title_btn><%= link_to '俳句の園とは？', 'about' %></li>
-    <a href="/users/<%= current_user.id %>"><%= current_user.name %></a>
+    <a href="/users/<%= current_user.id %>/edit"><%= current_user.name %></a>
 
     <li class= title_btn><%= link_to 'アカウント編集', edit_user_registration_path %></li>
     <li class= title_btn><%= link_to 'ログアウト', destroy_user_session_path, :method=>'delete' %></li>

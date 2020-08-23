@@ -63,7 +63,7 @@
 .top p {
   position: absolute;
   top: 25%;
-  left: 39%;
+  left: 40%;
   font-size: 60px;
   color: #ffffff;
   font-family: serif;
@@ -72,17 +72,13 @@
 .top audio {
   position: absolute;
   top: 50%;
-  left: 39%;
+  left: 41%;
   font-size: 60px;
   color: #ffffff;
 }
 
-.top::before{
-  background-color: rgba(0,0,0,0.4);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: ' ';
+.top_logo{
+  left:40%;
+  height:350px;
+  width:350px;
 }

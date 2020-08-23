@@ -1,59 +1,48 @@
-<div class="tweet_index_main">
+<div class="tweet_index_main_show">
   <div class="tweets_group">
     <div class= tweet_brank></div>
     <div class="tweet_content">
-      <% @tweets.each do |tweet| %>
-        <%= render partial: "tweet" , locals: { tweet: tweet }%>
-      <% end %>
+      <div class="tweet_text_group_haiku">
+        <div class="tweet_text_group_main">
+          <div class= tweet_brank></div>
+          <div class="tweet_image"><img class="t_image" src="/assets/images/coffee1.jpg">
+          </div>
+          <div class="tweet_text">
+            <div class="tweet_text_third"><%= @tweet.thirdphrase %></div>
+            <div class="tweet_text_second"><%= @tweet.secondphrase %></div>
+            <div class="tweet_text_first"><%= @tweet.firstphrase %></div>
+          </div>
+        </div>
       <div class="tweets_comment"><p> </p></div> 
     </div>
   </div> 
 </div>
+<% if current_user.likes.find_by(tweet_id: @tweet.id) %>
+  <%= link_to "いいね解除", tweet_like_path(@tweet), method: :delete %>
+<% else %>
+  <%= link_to "いいね", tweet_likes_path(@tweet), method: :post %>
+<% end %>
+
+
+
+
+
 <div class="comment-box">
-        <h2>アメリカ</h2>
         <div class="comment-inner">
-          <p class="lead">テスト</p>
+          <p class="lead">いいね</p>
           <div class="comment-bottom">
-            <h3 class="post-user-name">投
-            
-            
-            
-            
-            
- 
-            稿者: <a href="/users/351">a</a></h3>
+            <h3 class="post-user-name">投稿者: <a href="/users/241"><%= @tweet.name %></a></h3>
             <h3><i class="fas fa-comments"></i>コメント</h3>
-              <div class="comment-arrow"><span></span>Scroll</div>
-              <div class="users-comment-wrap">
-                <p class="user-name">
-                  <a href="/users/411">
-                    <span> kdkd : </span>
-</a>                </p>
-                <p class="user-comment">
-                  <span>jjj</span>
-                </p>
-
-              </div>
-
-                <div class="other">
-                  <time class="post-time">
-                      約2ヶ月前
-                  </time>
-                </div>
-                <hr class="comment-hr">
-
+              <p class="no-comment">コメントはまだありません。</p>
           </div>
-
         </div>
-
-
         <i id="plus-btn" class="fas fa-plus"></i>
         <i id="minus-btn" class="fas fa-minus"></i>
 
         <a class="comment-btn" href="#">
           <i class="fas fa-comment"></i>
 </a>
-          <a rel="nofollow" data-method="delete" href="/areas/191/likes/191">
-            <i class="fas fa-heart heart"></i>
-</a>        <div class="likes-count">2</div>
+          <a rel="nofollow" data-method="post" href="/areas/201/likes">
+            <i class="fas fa-heart no-heart"></i>
+</a>        <div class="likes-count">0</div>
       </div>

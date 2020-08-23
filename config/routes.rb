@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   resources :tweets, only: [:create, :destroy, :show,:edit] do
     resources :likes, only: [:create, :destroy]
   end
-
+  resources :users, only: [:show,:edit] 
 end
 
