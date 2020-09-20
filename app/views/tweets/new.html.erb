@@ -6,7 +6,6 @@
       <%= form_for @tweet do |f| %>
         <div class="tweet_new">
         <h3 class="toukou">新規投稿</h3>
-          <div><%= f.text_field :name, class: "form_new",placeholder: "お題" %></div>
           <div class="custom-file">
             <%= f.label :画像 %>
             <%= f.file_field :image ,id: "upload_file",class: "data_file" %>
@@ -16,7 +15,7 @@
           <div><%= f.text_field :firstphrase, class: "form_new",placeholder: "五" %></div>
           <div><%= f.text_field :secondphrase, class: "form_new",placeholder: "七"  %></div>
           <div><%= f.text_field :thirdphrase, class: "form_new",placeholder: "五"  %></div>
-          <div><%= f.text_field :text, class: "comment_new",placeholder: "コメント"  %></div>
+          <div><%= f.text_field :text, class: "comment_new",placeholder: "ひとこと"  %></div>
           <input class =  "btn btn-primary" id="toukou_btn" type="submit" value="投稿する">
         </div>
       <% end %>

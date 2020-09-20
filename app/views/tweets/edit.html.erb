@@ -13,36 +13,53 @@
             <div class="tweet_text_first"><%= @tweet.firstphrase %></div>
           </div>
         </div>
-      <div class="tweets_comment"><p> </p></div> 
+            <div class= comment_brank></div>
+      <div class="tweets_comment"><p class="comment_text"> <%= @tweet.text %></p></div> 
     </div>
   </div> 
 </div>
-<% if current_user.likes.find_by(tweet_id: @tweet.id) %>
-  <%= link_to "いいね解除", tweet_like_path(@tweet), method: :delete %>
-<% else %>
-  <%= link_to "いいね", tweet_likes_path(@tweet), method: :post %>
-<% end %>
 
-
-
-
-
-<div class="comment-box">
-        <div class="comment-inner">
-          <p class="lead">いいね</p>
-          <div class="comment-bottom">
-            <h3 class="post-user-name">投稿者: <a href="/users/241"><%= @tweet.name %></a></h3>
-            <h3><i class="fas fa-comments"></i>コメント</h3>
-              <p class="no-comment">コメントはまだありません。</p>
-          </div>
-        </div>
-        <i id="plus-btn" class="fas fa-plus"></i>
-        <i id="minus-btn" class="fas fa-minus"></i>
-
-        <a class="comment-btn" href="#">
-          <i class="fas fa-comment"></i>
-</a>
-          <a rel="nofollow" data-method="post" href="/areas/201/likes">
-            <i class="fas fa-heart no-heart"></i>
-</a>        <div class="likes-count">0</div>
-      </div>
+<div class="introduction-box-edit-main">
+  <div class="introduction-box-edit">
+    <div class="introduction_inner">
+      <!--いいね機能-->
+      <p class="like_swich">
+        <% if current_user.likes.find_by(tweet_id: @tweet.id) %>
+          <%= link_to("", tweet_like_path(@tweet), {method: :delete, class: "fas fa-heart no-heart"}) %>
+          <i class="fas fa-hear"><%= @tweet.likes.count %></i>
+        <% else %>
+          <a rel="nofollow" data-method="post" href="/tweets/<%= @tweet.id %>/likes">
+            <i class="far fa-heart"><%= @tweet.likes.count %></i>
+          </a>
+        <% end %>
+      </p>
+      <!--俳句-->
+      <div class="haiku_main_wrap_edit">
+        <%= @tweet.firstphrase %>&emsp;<%= @tweet.secondphrase %>&emsp;<%= @tweet.thirdphrase %><br>
+      </div> 
+    </div>
+    <div class="introduction_user_edit">
+      <div class="post-user-name">投稿者: <a href="/users/<%= @tweet.user_id %>"><%= @tweet.user.name %></a></div>
+    </div>
+  </div>
+  <div class="comment-box-edit">
+    <h3 class = "comment_title"><i class="fas fa-comments"></i>コメント</h3>
+    <div class="comment-bottom">
+      <% @comments.each do |comment| %>
+        <div class="comment_name_wrap">
+          <div class="comment_main_wrap">
+            <%= comment.content %>
+          </div> 
+          <span class= comment_contributor >投稿者:<%= comment.user.name %></span>
+        </div>    
+      <% end %>
+    </div>
+    <div class="comment-form">
+      <%= form_with(model: [@tweet, @comment], local: true) do |f| %>
+        <%= f.text_field :content %>
+        <%= f.submit "コメントする", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+  <div class= tweet_brank></div>
+</div>

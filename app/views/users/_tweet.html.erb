@@ -11,10 +11,17 @@
       </div>
     </div>
   <%end%>
-    <div class= contributor><%= link_to("/tweets/#{tweet.id}", method: :delete) do %>
-      <div class= contributor_text>削除する</div>
-    </div>
-    <%end%>
+    <% if user_signed_in? && current_user.id == tweet.user_id %>
+      <div class= contributor><%= link_to("/tweets/#{tweet.id}", method: :delete) do %>
+        <div class= contributor_text>削除する</div>
+        </div>
+      <%end%>
+    <% else %>
+    aaa
+    <div class= tweet_brank></div>
+    <div class= tweet_brank></div>
+    <% end %>
+
 
   <div class= tweet_brank></div>
 </div>

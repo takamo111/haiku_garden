@@ -150,6 +150,27 @@ background: rgb(238, 248, 224);
     font-weight: 300;
 }
 
+.post_tab{
+  position: relative;
+    margin: 0 0 10px 0;
+    
+  .post_history{
+  position: relative;
+  font-size: 32px;
+  display: block;
+  width: auto;
+  }
+  .post_right{
+    font-size: 18px;
+    position: absolute;
+    top: 18px;
+    right: 152px;
+  }
+
+  
+}
+
+
 .haiku_name_wrap{
 
 max-width: 1080px;
@@ -160,12 +181,6 @@ font-size: 20px;
     border-bottom: 1px solid #333;
 }
 
-.haiku_history{
-  position: relative;
-  font-size: 24px;
-  display: block;
-  width: auto;
-}
 
 .haiku_main_wrap{
   position: relative;
@@ -202,9 +217,7 @@ font-size: 20px;
 
 //閲覧機能
 
-.pagenate{
 
-}
 .tweet_text_group_haiku{
   height:100%;
   width:100%;
@@ -370,11 +383,20 @@ position: relative;
     margin: auto 0;
 }
 
+.comment_text{
+  font-size: 16px;
+  text-align: center;
+}
+
 .tweets_comment p {
   margin: 0; 
   padding: 0;
   height:60px;
   opacity:0,5;
+}
+
+.comment_brank{
+  height:20px;
 }
 
 .comment-box{
@@ -411,3 +433,114 @@ position: relative;
 }
 
 
+
+
+
+
+.nav-tabs {
+  border-bottom:none;
+}
+
+
+
+.nav-tabs .nav-link.active {
+  background-color:#e2e2e2;
+  border-bottom:#e2e2e2;
+  font-weight: bold;
+  color:black;
+}
+
+.nav-link {
+  color:black;
+}
+
+.tab-pane.active .tab-pane-header {
+  padding:2rem;
+  background-color:#e2e2e2;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  margin-bottom:1rem;
+  color:black;
+}
+
+.tab-pane:first-child .tab-pane-header {
+  border-top-left-radius: 0;
+}
+
+
+.introduction_inner{
+
+}
+
+.introduction-box-edit-main{
+background-color:#adbdb442;
+
+}
+
+.introduction-box-edit{
+  position: relative;
+  padding: 30px 80px 20px;
+  border-radius: 5px;
+  height: 200px;
+  max-width: 800px;
+  border: 1px solid #111;
+  background: rgba(255,255,255,0.9);
+  margin: 50px auto 0;
+  }
+.haiku_main_wrap_edit{
+  margin-left: auto;
+  margin-right: auto;
+  width:20em;
+  font-size:24px;
+  text-decoration: underline;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+.like_swich{
+  display: inline;
+  vertical-align: middle;
+  font-size:24px;
+}
+
+.introduction_user_edit{
+  float:right;
+  font-size:18px;
+}
+
+.comment-box-edit{
+  position: relative;
+  padding: 30px 80px 20px;
+  border-radius: 5px;
+  height: auto;
+  max-width: 800px;
+  border: 1px solid #111;
+  background: rgba(255,255,255,0.9);
+  margin: 50px auto 0;
+  }
+
+
+  .comment_name_wrap{
+
+    max-width: 1080px;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    }
+    
+    .comment_main_wrap{
+      position: relative;
+      font-size: 18px;
+      display: block;
+      width: auto;
+      padding: 0px 0 5px 0;
+    }
+    .comment_contributor{
+      position: relative;
+      font-size: 14px;
+      display: block;
+      width: auto;
+      padding: 0px 0 1px 0;
+    }
