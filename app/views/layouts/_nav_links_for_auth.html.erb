@@ -4,10 +4,9 @@
   <% if user_signed_in? %>
     <li class= title_btn><%= link_to 'ホーム', root_path %></li>
     <a class= title_btn  href="/users/<%= current_user.id %>/edit"><%= current_user.name %></a>
-
     <li class= title_btn><%= link_to 'アカウント編集', edit_user_registration_path %></li>
-    <li class= title_btn><%= link_to '投稿一覧', 'tweets' %></li>
-    <li class= title_btn><%= link_to '投稿する', 'tweets_new' %></li>
+    <li class= title_btn><%= link_to '投稿一覧', tweets_path %></li>
+    <li class= title_btn><%= link_to '投稿する', new_tweet_path %></li>
         <li class= title_btn><%= link_to 'ログアウト', destroy_user_session_path, :method=>'delete' %></li>
   <% else %>
     <li class= title_btn><%= link_to '俳句の園とは？', 'about' %></li>

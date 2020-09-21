@@ -20,6 +20,7 @@ class TweetsController < ApplicationController
     end
   end
 
+
   def edit
     @tweet = Tweet.find(params[:id])
     @comment = @tweet.comments.build
@@ -32,6 +33,7 @@ class TweetsController < ApplicationController
       tweet.destroy
     end
   end
+
 
   private
   def tweet_params

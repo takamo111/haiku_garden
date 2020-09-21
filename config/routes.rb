@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   get 'tweets', to: 'tweets#index'
   get 'tweets_new', to: 'tweets#new'
   get 'about', to:'tops#about'
-  resources :tweets, only: [:create, :destroy, :show,:edit] do
+  resources :tweets, only: [:index, :create, :destroy, :edit, :new] do
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
   end
+
   resources :users, only: [:show,:edit] 
 end
 

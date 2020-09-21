@@ -1,0 +1,77 @@
+<div class="tweet_index_main">
+  <div class="tweets_group">
+    <div class= tweet_brank></div>
+    <div class="tweet_content">
+      <% @tweets.each do |tweet| %>
+        <%= render partial: "tweet" , locals: { tweet: tweet }%>
+      <% end %>
+      <div class= pagenate >
+        <%= paginate(@tweets) %>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<!-- 過去の投稿 -->
+<div class="container">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation">
+      <a aria-controls="tab_a" data-toggle="tab" href="#tab_a" role="tab">投稿順</a>
+    </li>
+    <li role="presentation">
+      <a aria-controls="tab_b" data-toggle="tab" href="#tab_b" role="tab">いいね順</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab_a" role="tabpanel">
+    <div class="contents_haiku_index">
+      <div class="post_tab">
+        <div class="post_history"><i class="fas fa-history"></i>過去の投稿</div>  
+        <div class="post_right">
+        </div>
+      </div>  
+        <% @tweets.each do |tweet| %>
+          <div class="haiku_name_wrap">
+            <div class="haiku_main_wrap">
+            <%= tweet.firstphrase %>&emsp;<%= tweet.secondphrase %>&emsp;<%= tweet.thirdphrase %><br>
+            </div> 
+              <span class= haiku_contributor >投稿者:<%= tweet.user.name%></span>
+              <div>
+                <i class="fas fa-heart"></i>
+                  <%= tweet.likes.count %>
+              </div>
+          </div>    
+        <% end %>
+      <%= paginate(@tweets) %>
+    </div> 
+    </div>
+    <div class="tab-pane" id="tab_b" role="tabpanel">
+    <div class="contents_haiku_index">
+      <div class="post_tab">
+        <div class="post_history"><i class="fas fa-history"></i>過去の投稿</div>  
+        <div class="post_right">
+        </div>
+      </div>  
+        <% @tweet_ranking.each do |tweet| %>
+          <div class="haiku_name_wrap">
+            <div class="haiku_main_wrap">
+            <%= tweet.firstphrase %>&emsp;<%= tweet.secondphrase %>&emsp;<%= tweet.thirdphrase %><br>
+            </div> 
+              <span class= haiku_contributor >投稿者:<%= tweet.user.name%></span>
+              <div>
+                <i class="fas fa-heart"></i>
+                  <%= tweet.likes.count %>
+              </div>
+          </div>    
+        <% end %>
+      <%= paginate(@tweet_ranking) %>
+    </div> 
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
