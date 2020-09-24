@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: haiku_garden_production
-  username: haiku_garden
-  password: <%= ENV['haiku_garden_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
