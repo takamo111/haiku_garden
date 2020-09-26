@@ -75,6 +75,7 @@ gem 'font-awesome-sass', '~> 5.13.0'
 gem 'rename'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 
 group :production do
   gem 'pg'
