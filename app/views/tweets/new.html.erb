@@ -1,9 +1,11 @@
 <div class="back_contents">
+
   <div class="tweet_contents">
     <div class= tweet_brank></div>
     <div class= tweet_brank></div>
     <div class="tweet_main">
       <%= form_for @tweet do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
         <div class="tweet_new">
         <h3 class="toukou">新規投稿</h3>
           <div class="custom-file">

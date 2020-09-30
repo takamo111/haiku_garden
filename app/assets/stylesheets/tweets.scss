@@ -230,10 +230,6 @@ font-size: 20px;
   width:410px;
   background : no-repeat top/100% 100% url( "/assets/images/haiku_backgrounda.jpg");
 }
-.tweet_link{
-
-
-}
 
 .contributor{
   position: relative;
@@ -410,11 +406,6 @@ position: relative;
     margin: 50px auto 0;
 }
 
-
-
-
-
-
 //投稿完了
 .success{
   font-family: serif;
@@ -432,16 +423,9 @@ position: relative;
   }
 }
 
-
-
-
-
-
 .nav-tabs {
   border-bottom:none;
 }
-
-
 
 .nav-tabs .nav-link.active {
   background-color:#e2e2e2;
@@ -470,7 +454,6 @@ position: relative;
 
 .introduction_box_edit_main{
 background-color:#adbdb442;
-
 }
 
 .introduction_box_edit{
@@ -504,7 +487,7 @@ background-color:#adbdb442;
   font-size:18px;
 }
 
-.comment-box-edit{
+.comment_box_edit{
   position: relative;
   padding: 30px 80px 20px;
   border-radius: 5px;
@@ -515,9 +498,7 @@ background-color:#adbdb442;
   margin: 50px auto 0;
   }
 
-
   .comment_name_wrap{
-
     max-width: 1080px;
     height: auto;
     padding: 10px;
@@ -539,4 +520,12 @@ background-color:#adbdb442;
       display: block;
       width: auto;
       padding: 0px 0 1px 0;
+    }
+
+    .alert {
+      color:#262626; 
+      background:#FFEBE8;
+      text-align: center;
+      border:2px solid #990000;
+      padding:12px; font-weight:850;
     }
