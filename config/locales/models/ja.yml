@@ -1,0 +1,32 @@
+ja:
+  activerecord:
+    models:
+      tweet: ツイート
+      comment: コメント
+      like: いいね
+      user: ユーザー
+    attributes:
+      user: 
+        id: ID
+        created_at: 登録日時
+        updated_at: 更新日時
+        email: メールアドレス
+        password: パスワード
+        name: ニックネーム
+      tweet:
+        name: 名前
+        text: ひとこと
+        image: 画像
+        thirdphrase: 三の句
+        secondphrase: 二の句
+        firstphrase: 一の句
+      comment:
+          content: コメント
+        
+
+
+
+      
+
+      
+
