@@ -82,3 +82,40 @@
   height:350px;
   width:350px;
 }
+
+
+
+
+
+.top{
+  position:relative;
+  widows: 100%;
+}
+.top video{
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  background-size: cover;
+}
+
+.top p {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  font-size: 60px;
+  color: #ffffff;
+  font-family: serif;
+}
+
+.top audio {
+  position: absolute;
+  top: 50%;
+  left: 41%;
+  font-size: 60px;
+  color: #ffffff;
+}
+
+.top_logo{
+  left:40%;
+  height:350px;
+  width:350px;
+}

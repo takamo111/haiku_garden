@@ -20,7 +20,6 @@ class TweetsController < ApplicationController
     end
   end
 
-
   def edit
     @tweet = Tweet.find(params[:id])
     @comment = @tweet.comments.build
