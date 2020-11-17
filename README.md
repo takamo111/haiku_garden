@@ -7,6 +7,8 @@
 俳句の園は、五七五の俳句形式で今の気持ちを投稿できるアプリです。
 投稿に対してコメントをしたり、いいねをつけることもできます。
 https://i.gyazo.com/d7c5431c810a63393e2c40620e713ab3.jpg
+![haiku_garden_logo](https://user-images.githubusercontent.com/56215139/99416311-13afd880-293c-11eb-8003-6f4f55db0e96.jpg)
+
 
  
 # 概要
