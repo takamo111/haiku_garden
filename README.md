@@ -21,11 +21,11 @@ heroku
 教室で学んだ知識をアウトプットするため、
 
 ## 新規登録画面
-新規登録画面は、deviseで作成しました。上部バナーもしくはサインイン画面のボタンから新規登録画面に飛ぶことができます。
-サインイン
-<a href="https://gyazo.com/a2a371e45d34a1e5f59c650a560aa6c1"><img src="https://i.gyazo.com/a2a371e45d34a1e5f59c650a560aa6c1.png" alt="Image from Gyazo" width="30%"/></a>
-新規登録
-<a href="https://gyazo.com/22ccc2fce3dd1280395b18b95438a9a3"><img src="https://i.gyazo.com/22ccc2fce3dd1280395b18b95438a9a3.png" alt="Image from Gyazo" width="30%/></a>
+新規登録画面は、deviseで作成しました。上部バナーもしくはサインイン画面のボタンから新規登録画面に飛ぶことができます。  
+サインイン  
+<a href="https://gyazo.com/a2a371e45d34a1e5f59c650a560aa6c1"><img src="https://i.gyazo.com/a2a371e45d34a1e5f59c650a560aa6c1.png" alt="Image from Gyazo" width="30%"/></a>  
+新規登録  
+<a href="https://gyazo.com/22ccc2fce3dd1280395b18b95438a9a3"><img src="https://i.gyazo.com/22ccc2fce3dd1280395b18b95438a9a3.png" alt="Image from Gyazo" width="30%/></a>  
 
 
 ## ホーム、上部バナー
@@ -36,7 +36,6 @@ heroku
 ## 投稿画面
 画像と、一の句〜三の句を記入します。
 任意でコメントも書き込め、こちらは詳細画面で確認できます。
-あえてタイトルは投稿できないようになっています。画像と俳句のみで作った人の気持ちを読み取ってみてください。
 
 <a href="https://gyazo.com/52d225610e2e5b6e1ada9a61002d432e"><img src="https://i.gyazo.com/52d225610e2e5b6e1ada9a61002d432e.jpg" alt="Image from Gyazo" width="50%"/></a>
 
