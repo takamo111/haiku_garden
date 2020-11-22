@@ -63,8 +63,8 @@ https://haikugarden.herokuapp.com/
 
 ## 詳細画面  
 
-詳細画面では、投稿のより詳しい情報を見ることができます。投稿画面でコメントを入力した場合、こちらに表示されます。  
-また、閲覧者はこちらで投稿にいいねをしたりコメントを残すこともできます。  
+詳細画面では、投稿のより詳しい情報を見ることができます。投稿画面でコメントを入力した場合、こちらに表示されます。また、閲覧者はこちらで投稿にいいねをしたりコメントを残すこともできます。  
+
 <a href="https://gyazo.com/c8ceaa9afb7edbc1b544e14d6fcbb15f"><img src="https://i.gyazo.com/c8ceaa9afb7edbc1b544e14d6fcbb15f.jpg" alt="Image from Gyazo" width="50%"/></a>
 
 コメント機能  
